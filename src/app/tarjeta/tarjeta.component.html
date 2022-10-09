@@ -1,0 +1,27 @@
+
+<div class="container mt-5">
+    <div class="row bg-dark justify-content-center">
+        <div class="card text-center m-5" style="width: 18rem;">
+            <img src="assets/images/ucreativa.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title">Estudiante: X</h2>
+              <p>Edad: {{edad}}</p>
+              <p id="aviso" *ngIf="edad>=18">Ya puede matricular </p>
+              <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-block mb-2" (click)="incrementarEdad()">Incrementar</button>
+                <button type="button" class="btn btn-outline-dark btn-block" (click)="reducirEdad()">Disminuir</button>
+              </div>
+              
+              <br>
+              <div class="text-start m-3">
+                <h3>Cursos</h3>
+                <li *ngFor="let item of cursos">{{item}}</li>
+              </div>
+              <br>
+              <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+            </div>  
+        </div>
+    </div>
+    
+</div>
+
